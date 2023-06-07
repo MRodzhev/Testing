@@ -37,12 +37,6 @@ markdown_extensions:
 plugins:
   - tags
   - search
-  - git-committers:
-      enabled: false
-      repository: vkostadinov9/testing_mk-docs
-      branch: main
-      enterprise_hostname: dxc.github.com
-
 
 repo_url: https://github.dxc.com/vkostadinov9/testing_mk-docs
 edit_uri: edit/main/docs/
