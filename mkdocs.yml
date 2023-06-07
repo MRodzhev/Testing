@@ -1,19 +1,123 @@
-site_name: My MkdocsProject test run
+
+Кореспонденцията бе отворена. Едно непрочетено съобщение.
+
+Пропускане към съдържанието
+Използване на Gmail с екранни четци
+1 от 5 898
+(без тема)
+Вх. поща
+
+Rodzhev, Martin
+Прикачени файлове
+12:45 ч. (преди 0 минути)
+до мен
+
+   
+Превод на съобщението
+Изключване за: английски
+
+
+
+DXC Technology Company -- This message is transmitted to you by or on behalf of DXC Technology Company or one of its affiliates. It is intended exclusively for the addressee. The substance of this message, along with any attachments, may contain proprietary, confidential or privileged information or information that is otherwise legally exempt from disclosure. Any unauthorized review, use, disclosure or distribution is prohibited. If you are not the intended recipient of this message, you are not authorized to read, print, retain, copy or disseminate any part of this message. If you have received this message in error, please destroy and delete all copies and notify the sender by return e-mail. Regardless of content, this e-mail shall not operate to bind DXC Technology Company or any of its affiliates to any order or other contract unless pursuant to explicit written agreement or government initiative expressly permitting the use of e-mail for such purpose.
+ Един прикачен файл
+  • сканирано от Gmail
+site_name: TeamUP Documentation
+
 theme:
   name: material
   features:
+    - content.action.edit
+    - navigation.path
+    - navigation.instant
+    - navigation.top
+    - navigation.tracking
     - search.suggest
     - search.highlight
-    - search.tabs.link
-plugins:
-  - search
+    - search.share
+  
 
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - footnotes
+  - tables
+
+plugins:
+  - tags
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+      fallback_to_build_date: true
+  - git-committers:
+      enabled: false
+      repository: vkostadinov9/testing_mk-docs
+      branch: main
+      enterprise_hostname: dxc.github.com
+
+
+repo_url: https://github.dxc.com/vkostadinov9/testing_mk-docs
+edit_uri: edit/main/docs/
+
+extra_javascript:
+  - javascripts/feedback.js
 
 nav:
-  - Introduction: "pages/index.md"
-  - Tutorial: 
-      - Tutorial Subsection: "pages/tutorial/tutorial_subsection.md"
-  - About: "pages/about.md"
-  - FAQ: "pages/faq.md" 
+  - Development Environment Setup:
+    - OS Installation: dev_env_setup/os_install.md
+    - Requesting Accounts: dev_env_setup/requesting_accs.md
+    - MS Office Setup: dev_env_setup/ms_office.md
+    - Mail Client Setup: dev_env_setup/mail_setup.md
+    - VPN and Secure Gateway: dev_env_setup/vpn.md
+    - Phoneless TOTP: dev_env_setup/totp.md
+    - OpenShift CLI Setup: dev_env_setup/oc.md
+    - Citrix Client Setup: dev_env_setup/citrix.md
+    - tox Setup: dev_env_setup/tox_setup.md
+    - mvn Setup: dev_env_setup/mvn_setup.md
+
+  - Daily Monitoring Routines:
+    - Dashboards: monitoring/dashboards.md
+    - Daily Monitoring: monitoring/daily_mon.md
+
+  - Service Now:
+    - Information: service_now/intro.md
+    - Account Setup: service_now/snow_acc_setup.md
+    - Filters and Views: service_now/snow_filters.md
+    - Incidents Management: service_now/inc_mgmt.md
+    - Incidents Management Process: service_now/inc_mgmt_proc.md
+
+  - RaaS:
+    - RaaS:
+      - Deployment: raas/raas-deployment.md
+      - Rollback: raas/rollback.md
+    - Data Quality:
+      - Deployment: raas/dq-deployment.md
+      - Rollback: raas/rollback.md
+    - MapR Tickets: raas/mapr-tickets.md
+
+  - KPI Framework:
+    - Deployment: kpi/deployment.md
+    - Manual Triggering Smoke and Integration Test: kpi/manually_triggering_kpi_analysis.md
+    - Manual Triggering KPI Analysis: kpi/triggering_smoke_integration_tests.md
+
+  - Reference data: todo.md
+
+  - Jenkins:
+    - Pipelines: jenkins/raas_kpi_branch_descriptions.md
 
     
